@@ -8,5 +8,5 @@ runs:
       run: |
         git push origin --delete abc || echo "WARNING: Can't delete remote tag abc"
         git tag -d abc || echo "WARNING: Can't delete local tag abc"
-        git tag abc 8c10212e081a723a5156cd2cb2e0860635c140ed
+        git tag abc 590d136eb887c70bdfdb8a0e344a07e4207c5d25
         git push origin --tags
