@@ -1,0 +1,12 @@
+name: 'test'
+
+runs:
+  using: "composite"
+  steps:
+    - name: test
+      shell: bash
+      run: |
+        git push origin --delete abc || echo "WARNING: Can't delete remote tag abc"
+        git tag -d abc || echo "WARNING: Can't delete local tag abc"
+        git tag abc 8c10212e081a723a5156cd2cb2e0860635c140ed
+        git push origin --tags
